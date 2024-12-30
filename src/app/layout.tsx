@@ -10,6 +10,13 @@ const geologica = Geologica({
 export const metadata: Metadata = {
   title: "SP Pack",
   description: "Общий ресурс пак сервера СП5",
+  openGraph: {
+    title: "SP Pack",
+    description: "Общий ресурс пак сервера СП5",
+    images: [
+      "/link-cover.png"
+    ]
+  }
 };
 
 export default function RootLayout({
