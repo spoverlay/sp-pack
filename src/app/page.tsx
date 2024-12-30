@@ -1,8 +1,10 @@
-"use client"
+"use client";
 import { DownloadIcon } from "lucide-react";
 import SpPackIcon from "../../components/icons/SpPackIcon";
 
-
+interface Asset {
+  browser_download_url: string;
+}
 
 export default function Home() {
 
@@ -21,13 +23,13 @@ export default function Home() {
         }
 
         const releaseData = await response.json();
-        const assets = releaseData.assets;
+        const assets: Asset[] = releaseData.assets;
 
         if (!assets || assets.length === 0) {
             throw new Error('No assets found in the latest release.');
         }
 
-        const zipAsset = assets.find((asset: any) => asset.browser_download_url.endsWith('.zip'));
+        const zipAsset = assets.find((asset) => asset.browser_download_url.endsWith('.zip'));
 
         if (!zipAsset) {
             throw new Error('No .zip asset found in the latest release.');
@@ -58,13 +60,15 @@ export default function Home() {
             <p className="text-sm font-light opacity-50 w-fit">для игроков</p>
           </div>
           <button
-          onClick={() => downloadLatestZipAsset()}
-          className="flex gap-2 items-center p-3 px-10 text-lg rounded-xl border-2 border-dashed transition-all duration-200 md:px-14 border-white/50 bg-button md:hover:border-blue active:border-blue">
+            onClick={() => downloadLatestZipAsset()}
+            className="flex gap-2 items-center p-3 px-10 text-lg rounded-xl border-2 border-dashed transition-all duration-200 md:px-14 border-white/50 bg-button md:hover:border-blue active:border-blue"
+          >
             <DownloadIcon className="size-5"/>
             Скачать SP.zip
           </button>
         </div>
       </main>
+
       <footer className="flex relative gap-1.5 justify-center items-center font-light h-[10dvh]">
         <a target="_blank" href="https://spoverlay.ru" className="opacity-70 transition-all duration-200 active:opacity-100 md:hover:opacity-100 md:hover:text-blue active:text-blue">by spoverlay</a>
         <p className="font-extralight opacity-30">/</p>
