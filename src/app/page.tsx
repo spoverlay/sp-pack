@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <>
       <main className="flex relative justify-center items-center h-[90dvh] pt-[10dvh]">
-        <a href="https://github.com/spoverlay/sp-pack" className="absolute top-9 right-9 font-light opacity-70 transition-all duration-200 active:opacity-100 md:hover:text-blue md:hover:opacity-100 active:text-blue">
+        <a target="_blank" href="https://github.com/spoverlay/sp-pack" className="absolute top-9 right-9 font-light opacity-70 transition-all duration-200 active:opacity-100 md:hover:text-blue md:hover:opacity-100 active:text-blue">
           исходный код
         </a>
         <div className="p-10 py-8 space-y-4 rounded-2xl bg-secondary">
