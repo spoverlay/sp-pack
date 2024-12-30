@@ -51,7 +51,7 @@ export default function Home() {
         <a target="_blank" href="https://github.com/spoverlay/sp-pack" className="absolute top-9 right-9 font-light opacity-70 transition-all duration-200 active:opacity-100 md:hover:text-blue md:hover:opacity-100 active:text-blue">
           исходный код
         </a>
-        <div className="p-10 py-8 space-y-4 rounded-2xl bg-white drop-shadow-xl dark:drop-shadow-none dark:bg-secondary">
+        <div className="p-10 py-8 space-y-4 rounded-2xl bg-white drop-shadow-lg dark:drop-shadow-none dark:bg-secondary">
           <div className="flex flex-col items-center">
             <div className="flex gap-1 justify-center items-center text-3xl font-medium select-none">
               <SpPackIcon className="size-10 text-blue"/>
