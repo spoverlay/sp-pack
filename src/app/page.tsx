@@ -48,12 +48,12 @@ export default function Home() {
   return (
     <>
       <main className="flex relative justify-center items-center h-[90dvh] pt-[10dvh]">
-        <a target="_blank" href="https://github.com/spoverlay/sp-pack" className="absolute top-9 right-9 font-light opacity-70 transition-all duration-200 active:opacity-100 md:hover:text-primary md:hover:opacity-100 active:text-primary">
+        <a target="_blank" href="https://github.com/spoverlay/sp-pack" className="fixed top-9 right-9 font-light opacity-70 transition-all duration-200 active:opacity-100 md:hover:text-primary md:hover:opacity-100 active:text-primary">
           исходный код
         </a>
         <div className="p-10 py-8 space-y-4 bg-white rounded-2xl drop-shadow-lg dark:drop-shadow-none dark:bg-secondary">
           <div className="flex flex-col items-center">
-            <div className="flex gap-1 justify-center items-center text-3xl font-medium select-none">
+            <div className="flex gap-1 justify-center items-center text-3xl font-medium">
               <SpPackIcon className="size-10 text-primary"/>
               SP Pack
             </div>
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
           <button
             onClick={() => downloadLatestZipAsset()}
-            className="flex gap-2 items-center p-3 px-10 text-lg text-white rounded-xl border-2 border-dashed transition-all duration-300 md:px-14 bg-primary md:hover:border-primary dark:border-white/50 dark:bg-button active:border-primary">
+            className="flex gap-2 items-center p-3 px-10 text-lg text-white rounded-xl border-2 border-dashed transition-all duration-500 md:px-14 bg-primary md:hover:border-primary dark:border-white/50 dark:bg-button active:border-primary focus:scale-95">
             <DownloadIcon className="size-5"/>
             Скачать SP.zip
           </button>
